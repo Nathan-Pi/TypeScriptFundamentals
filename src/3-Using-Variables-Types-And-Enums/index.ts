@@ -1,6 +1,4 @@
-// string, number, boolean, array, undefined, null, any
-
-let firstName: string | null;
+let firstName: string | null | undefined;
 firstName = 'Dan';
 
 let age: number;
@@ -8,26 +6,22 @@ age = 45;
 
 let hasPurchased = true;
 
-let productNames: string[] = [];
-productNames.push('Basketball');
-
+let productNames: string[] = ['a', 'b', 'c']
 let petCount: number[] = [];
+
+productNames.push('baskerball');
 petCount.push(5);
 
-console.log(firstName, age, hasPurchased, productNames, petCount);
+console.log( firstName, age, hasPurchased, productNames, petCount);
 
-let productType = 'sports'; // homeGoods, grocery ("magic string")
-if (productType === 'sports') {
-  console.log('Found sports product type.');
-}
 
-// Using Enums
-enum ProductType {
+enum productType {
   Sports,
   HomeGoods,
-  Groceries,
+  Groceries
 }
-let pt = ProductType.Sports;
-if (pt === ProductType.Sports) {
-  console.log('Found sports product type.');
+
+let pt = productType.Sports;
+if (pt === productType.Sports) {
+
 }
